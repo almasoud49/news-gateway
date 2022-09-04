@@ -7,12 +7,12 @@ const loadCategories =async()=>{
 }
 const displayCategories = (categories)=>{
     const categoriesContainer = document.getElementById('news-container');
-    categories.forEach(item=>{
+    categories.forEach(category=>{
         const ul = document.createElement('ul');
         ul.classList.add('menu', 'menu-horizontal','rounded-box')
         ul.innerHTML =`
         <div class="row row-cols-auto list-unstyled  mx-auto d-block">
-        <li><a onclick ="loadCatDetails('${item.category_id}')">${item.category_name}</a></li>
+        <li><a onclick ="loadCategoryDetails('${category.category_id}')">${category.category_name}</a></li>
         </div>
         `;
 
